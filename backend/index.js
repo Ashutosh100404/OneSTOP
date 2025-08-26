@@ -16,10 +16,7 @@ const URI = process.env.MongoDBURI;
 
 async function startServer() {
   try {
-    await mongoose.connect(URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(URI);
     console.log("connected to mongoose");
 
     app.use("/company", CompanyRoute);
