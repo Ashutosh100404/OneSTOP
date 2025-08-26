@@ -37,4 +37,4 @@ app.use("/user", userRoute);
 
 // No app.listen() here!
 // Export handler for Vercel
-export const handler = serverless(app);
+export default app;
